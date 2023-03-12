@@ -12,15 +12,17 @@
     <title>Hello, world!</title>
   </head>
   <body>
-    <header>
-        <h1>Bienvenido a mi Blog</h1>
-    </header>
     <nav>
-        <a href="{% url 'post_list' %}" class="top-menu">Inicio<span class="glyphicon glyphicon-plus"></span></a>
-        <a href="{% url 'post_new' %}" class="top-menu">Nuevo<span class="glyphicon glyphicon-plus"></span></a>
+      {% include 'blog/navbar.html'%}
     </nav>
-    {% block container %}
-    {% endblock %}
+    <div class="container">
+      <header>
+        <h1>Bienvenido a mi Blog</h1>
+      </header>
+      {% block container %}
+      {% endblock %}
+    </div>
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
