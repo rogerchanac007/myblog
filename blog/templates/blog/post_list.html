@@ -6,7 +6,6 @@
             <h2><a href="{% url 'post_detail' pk=post.pk %}">{{post.titulo}}</a>
             <a class="btn btn-sm btn-success" href="{% url 'post_edit' pk=post.pk %}">Editar</a>
             </h2>
-              
               <p>{{post.texto}}</p>
               <small>{{post.create_date}}</small>
           </section>
