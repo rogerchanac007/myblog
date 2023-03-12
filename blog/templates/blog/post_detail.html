@@ -20,13 +20,11 @@
     
         </nav>
         <article>
-            {% for post in posts %}
                 <section>
-                    <h2><a href="{% url 'post_detail' pk=post.pk %}">{{post.titulo}}</a></h2>
+                    <h2>{{post.titulo}}</h2>
                     <p>{{post.texto}}</p>
                     <small>{{post.create_date}}</small>
                 </section>
-            {% endfor %}
         </article>
     
     </div>
